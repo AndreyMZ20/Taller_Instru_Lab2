@@ -51,6 +51,19 @@ Algunas ventajas del aislamiento en los diseños eléctronicas se listan a conti
 1. Para proteger el equipo eléctrico de sobretensiones y descargas.
 1. Para proteger los circuitos eléctricos del ruido transitorio.
 
+## 5. Investigue diseños electrónicos para aislar eléctricamente señales DC o de baja frecuencia (<100Hz).
+Para llevar a cabo un aislamiento es posible aplicar diferentes métodos [7]:
+1. Optoacoplador: utiliza un LED infrarrojo y un fototransistor para proporcionar una vía de señal, pero con aislamiento de alta tensión. Sin señal de entrada, el LED está apagado y el fototransistor está inactivo, por lo que la resistencia externa de pull-up produce una salida alta. Cuando se aplica una señal de entrada, el LED se enciende, la base del fototransistor se ilumina y produce la polarización que activa el transistor. Esto hace que la salida se vuelva baja. Estos proporcionan un buen aislamiento de alta tensión de hasta 5 a 10 kV. Su principal desventaja es la velocidad de operación en algunos sistemas digitales. Hoy en día, una forma más nueva de aislante que utiliza conectividad capacitiva está disponible.
+![optop](https://github.com/AndreyMZ20/Taller_Instru_Lab2/blob/main/Img/opto.png)
+1. El método de aislamiento basado en bordes: este método utiliza dos vías, una para datos lentos y otra para datos de alta velocidad. Un aislante digital típico está compuesto por una sección de transmisor (TX) y una sección de receptor (RX). Están aislados mediante el acoplamiento capacitivo. 
+![isoflanco](https://github.com/AndreyMZ20/Taller_Instru_Lab2/blob/main/Img/isoflan.png)
+En la figura anterior se muestra una señal de entrada de un solo extremo que se va a transmitir se convierte primero en una señal equilibrada que luego pasa a través de los condensadores de aislamiento. En la vía inferior, la señal recibida se diferencia en pulsos estrechos. Comparadores y un flip-flop procesan estos pulsos en pulsos que se aplican a un multiplexor (MUX), que proporciona la salida. Cabe destacar que la señal de entrada también se envía a la vía superior de baja velocidad, donde modula el ancho de pulso de un oscilador de frecuencia más alta. La señal de modulación por ancho de pulso (PWM) se convierte en una señal equilibrada y se pasa a través de los condensadores de aislamiento, donde se procesa nuevamente en pulsos. Un filtro paso bajo (LPF) filtra la PWM de alta frecuencia y recupera la señal original. Si la señal de entrada tiene una frecuencia demasiado baja, un circuito de lógica de decisión (DLC) detecta la situación y cambia el multiplexor a la vía de baja frecuencia.
+1. Aislador digital: estos son circuitos integrados que reciben señales digitales y transmiten estas mismas a otras líneas aisladas eléctricamente, cuentan con una señal de enable permite que los transmisores se pongan en un estado de alta impedancia, lo que permite que múltiples transmisores compartan un solo bus sin colisiones entre las señales. Una configuración bidireccional de medio dúplex de 2 cables se muestra en la siguiente figura, en donde  cada nodo contiene un transmisor y un receptor, y todos los transmisores y receptores comparten el mismo cable de par trenzado de 2 cables [8].
+![isodigi](https://github.com/AndreyMZ20/Taller_Instru_Lab2/blob/main/Img/aislado1.png)
+El modelo RS-485 es una opción muy utilizada para el aislamiento digital, este se muestra a continuación [8].
+![isodigi2](https://github.com/AndreyMZ20/Taller_Instru_Lab2/blob/main/Img/aislado2.png)
+
+
 ## 6. Investigue diseños de amplificadores con ganancia programable.
 El diseño de amplificadores de ganancia programable (AGP) se pueden dividir en 2 grandes categorias [2]:
 
@@ -107,4 +120,11 @@ Power sum near-end crosstalk (PSNEXT) es una medida de NEXT que incluye la suma 
  
  [4] Wikipedia, “Crosstalk”, Wikipedia, 2021, https://en.wikipedia.org/wiki/Crosstalk.
  
- [5]
+ [5] "What Is Electrical Isolation?," Atlas Scientific Blog, June 8, 2022. [Online]. Available: https://www.atlas-scientific.com/blog/what-is-electrical-isolation/
+
+ [6] T. Kugelstadt, "When good grounds turn bad—isolate!," Analog Applications Journal, Texas Instruments Incorporated, vol. 3, no. 3, pp. 11-15, 2008.
+ 
+ [7] S. Wayne, "Digital Isolators protect RS-232, RS-485, and CAN Buses," Analog Dialogue, vol. 39, Oct. 2005. [Online]. Available: https://www.analog.com/en/analog-dialogue/articles/digital-isolators-protect-rs232-bus.html
+ 
+ [8] L. Frenzel, "Understanding Signal and Power Isolation Techniques," Electronic Design, May 17, 2017. [Online]. Available: https://www.electronicdesign.com/technologies/power/article/21805062/understanding-signal-and-power-isolation-techniques
+
