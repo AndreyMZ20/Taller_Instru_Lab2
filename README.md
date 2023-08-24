@@ -39,6 +39,18 @@ Al llegar al final del cable, las dos señales en cuestión no se pueden acoplar
 
 ![senalBalanceada](https://github.com/AndreyMZ20/Taller_Instru_Lab2/blob/main/Img/senalBalanceada.png)
 
+## 4. ¿Qué es el aislamiento eléctrico entre dos tierras? ¿En los diseños electrónicos que ventajas tiene el aislamiento entre señales?
+Por definición, el aislamiento se refiere a la introducción deliberada de una separación no conductora, la cual puede ser tanto física como eléctrica, o incluso ambas al mismo tiempo. Un aislador eléctrico (también conocido como aislador o desconector) es un dispositivo que separa los dos circuitos, proporcionando una barrera mediante un interruptor mecánico. Esta barrera evita que voltajes peligrosos pasen a través del circuito eléctrico en caso de una falla eléctrica o un fallo en el sistema [5]. En muchas ocasiones, los diseñadores, sin tener conocimiento de las importantes diferencias de potencial de tierra entre ubicaciones remotas de buses, ya sea confían en la tierra local como un camino confiable de retorno de señal o conectan directamente las tierras remotas entre sí, lo que crea bucles de tierra ruidosos. En ambos casos, la integridad de la señal de transmisión se ve comprometida [6]. Para solventar este tipo de problemática es posible aislar las tierras, los sistemas de aislamiento eléctrico previenen la transferencia de corriente continua no deseada y corriente alterna no deseada entre dos partes de un circuito [5]. Un ejemplo de aislamiento eléctrico se observa a continuación.
+
+![aislamiento](https://github.com/AndreyMZ20/Taller_Instru_Lab2/blob/main/Img/aislamiento.png)
+
+Algunas ventajas del aislamiento en los diseños eléctronicas se listan a continuación [5]:
+1. Para proporcionar aislamiento galvánico (bloquea el flujo eléctrico al comunicarse sin un camino de conducción directa entre los dos circuitos aislados).
+1. Para prevenir bucles de tierra.
+1. Para proteger en caso de cambios de nivel de voltaje.
+1. Para proteger el equipo eléctrico de sobretensiones y descargas.
+1. Para proteger los circuitos eléctricos del ruido transitorio.
+
 ## 6. Investigue diseños de amplificadores con ganancia programable.
 El diseño de amplificadores de ganancia programable (AGP) se pueden dividir en 2 grandes categorias [2]:
 
@@ -94,3 +106,5 @@ Power sum near-end crosstalk (PSNEXT) es una medida de NEXT que incluye la suma 
  [3] Electrositio, “Relación de rechazo en modo común (CMRR) y el amplificador operacional”, Electrositio, 2019, https://electrositio.com/relacion-de-rechazo-en-modo-comun-cmrr-y-el-amplificador-operacional/
  
  [4] Wikipedia, “Crosstalk”, Wikipedia, 2021, https://en.wikipedia.org/wiki/Crosstalk.
+ 
+ [5]
