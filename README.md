@@ -50,5 +50,7 @@ Power sum near-end crosstalk (PSNEXT) es una medida de NEXT que incluye la suma 
 ## Bibliografía
 
  [1] J. M. López-González, R. Pallas-Areny y P. J. Riu, “Amplificadores operacionales de ganancia programable”, Mundo Electrónico, abril 1989.
+ 
  [2] Electrositio, “Relación de rechazo en modo común (CMRR) y el amplificador operacional”, Electrositio, 2019, https://electrositio.com/relacion-de-rechazo-en-modo-comun-cmrr-y-el-amplificador-operacional/
+ 
  [3] Wikipedia, “Crosstalk”, Wikipedia, 2021, https://en.wikipedia.org/wiki/Crosstalk.
