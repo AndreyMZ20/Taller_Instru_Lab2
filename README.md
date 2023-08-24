@@ -18,7 +18,7 @@ Algunos de los tipos y sus respectivos datos se muestran en la siguiente tabla (
 |C   |  0 a 2316  |  0 a 37.079   |
 |E   | -270 a 1000|-9.835 a 76.373|
 |J   | -210 a 1200|-8.095 a 69.555|
-|K   | -270 a 1300|-6.458 a 54.819|
+|K   | -270 a 1370|-6.458 a 54.819|
 |N   | -270 a 1300|-4.345 a 47.513|
 |R   |-50 a 1768.1|-0.226 a 21.089|
 |S   |-50 a 1768.1|-0.236 a 18.682|
